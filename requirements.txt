@@ -1,0 +1,14 @@
+langchain
+langchain-core
+langchain-openai
+langchain-groq
+langchain-community
+langgraph
+groq
+openai
+python-dotenv
+faiss-cpu
+tiktoken
+fastapi
+uvicorn
+requests
