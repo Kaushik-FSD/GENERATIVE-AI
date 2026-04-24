@@ -8,13 +8,23 @@ model = ChatGroq(
     model="llama-3.1-8b-instant"
 )
 
+print("press 1 for happy mode, 2 for sad mode, 3 for angry mode")
+mode = int(input("Enter the mode: "))
+
 print("---------- Chat Bot ----------")
 print("Type 'quit' to end the conversation")
 print("------------------------------")
 
+if mode == 1:
+    system_message = "you are a funny AI assistant, you respond with a lot of emojis and funny words"
+elif mode == 2:
+    system_message = "you are a sad AI assistant, you respond with a lot of emojis and sad words"
+elif mode == 3:
+    system_message = "you are an angry AI assistant, you respond agressively and impatiently"
+
 # to store chat convo we can add a list for now:
 messages = [
-    SystemMessage(content="you are a funny AI assistant")  #This is the system message that will be used to guide the AI's behavior
+    SystemMessage(content=system_message)  #This is the system message that will be used to guide the AI's behavior
 ]
 
 while True:
